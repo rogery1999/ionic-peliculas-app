@@ -1,0 +1,7 @@
+<ion-slides mode="ios" pager="true" [options]="slideOpts">
+    <ion-slide *ngFor="let pelicula of peliculasRecientes">
+        <ion-card (click)="mostrarDetalles(pelicula.id.toString())">
+            <img [src]="pelicula.backdrop_path | imagen">
+        </ion-card>
+    </ion-slide>
+</ion-slides>
